@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Lezione HTML</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+    <!-- Dato il form di partenza validare i campi tale che:
+
+Tutti i campi siano obbligatori.
+I campi relativi a numero carta di credito e CVC devono avere una
+ prima validazione sulla lunghezza e la correttezza 
+dei valori. -->
+  </head>
+
+  <body>
+    <form action="/action_page.php" method="get">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" required /><br /><br />
+      <label for="pass">Password:</label>
+      <input type="password" id="pass" name="pass" required /><br /><br />
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="fname" required /> <br />
+      <br />
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lname" required /><br />
+      <br />
+      <label for="birth">When is your birthday?:</label>
+      <input type="date" id="birth" name="birth" required /><br />
+      <br />
+      <label for="phone">What is your phone number?:</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="+39 "
+        pattern="[0-9]{13,19}"
+        required
+      /><br />
+      <br />
+      <label for="plan">Choose a plan:</label>
+      <select name="plan" id="plan" required>
+        <optgroup label="Plans">
+          <option value="free">Free</option>
+          <option value="platinum">Platinum</option>
+          <option value="silver">Silver</option>
+          <option value="gold">Gold</option>
+        </optgroup></select
+      ><br />
+      <br />
+      <label for="pro">Want go PRO?:</label>
+      <input type="checkbox" id="pro" name="pro" /><br />
+      <br />
+      <label for="ccn">Credit Card Number:</label>
+      <input
+        id="ccn"
+        type="tel"
+        pattern="[0-9]{13,19}"
+        autocomplete="cc-number"
+        maxlength="19"
+        placeholder="xxxx xxxx xxxx xxxx"
+        required
+      />
+      <br />
+      <br />
+      <label for="cvc"> Card CVC:</label>
+      <input
+        id="cvc"
+        type="tel"
+        inputmode="numeric"
+        maxlength="3"
+        pattern="^[0-9]{3}"
+        placeholder="xxx"
+        required
+      />
+      <br />
+      <br />
+      <label for="date"> Credit card expiring date:</label>
+      <input id="cvc" type="date" inputmode="numeric" required />
+      <br />
+      <br />
+      <label for="address"> Write your address:</label>
+      <input id="address" type="search" required />
+      <br />
+      <br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

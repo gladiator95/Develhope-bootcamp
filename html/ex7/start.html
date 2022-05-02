@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Lezione HTML</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+    <!-- Crea un form di anagrafica per la registrazione ad un piattaforma.
+
+Il form deve contenere i seguenti campi:
+ - Email
+ - Password
+ - Nome e Cognome
+ - Data di nascita
+ - Numero di telefono
+ - Selettore con scelta di un piano di abbonamento.
+   - Un piano free
+   - Un gruppo di massimo 3 piani con prezzo crescente
+ - Un campo per scegliere se aggiungere o meno i vantaggi PRO
+ - Campi per inserimento carta di scredito
+   - Numero carta
+   - CVC
+   - Scadenza
+ - Indirizzo di fatturazione -->
+  </head>
+
+  <body>
+    <form action="/action_page.php" method="get">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" /><br /><br />
+      <label for="pass">Password:</label>
+      <input type="password" id="pass" name="pass" /><br /><br />
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="fname" /> <br />
+      <br />
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lname" /><br />
+      <br />
+      <label for="birth">When is your birthday?:</label>
+      <input type="date" id="birth" name="birth" /><br />
+      <br />
+      <label for="phone">What is your phone number?:</label>
+      <input type="tel" id="phone" name="phone" /><br />
+      <br />
+      <label for="plan">Choose a plan:</label>
+      <select name="plan" id="plan">
+        <optgroup label="Plans">
+          <option value="volvo">Free</option>
+          <option value="mercedes">Platinum</option>
+          <option value="audi">Silver</option>
+          <option value="audi">Gold</option>
+        </optgroup></select
+      ><br />
+      <br />
+      <label for="pro">Want go PRO?:</label>
+      <input type="checkbox" id="pro" name="pro" /><br />
+      <br />
+      <label for="ccn">Credit Card Number:</label>
+      <input
+        id="ccn"
+        type="tel"
+        inputmode="numeric"
+        autocomplete="cc-number"
+        maxlength="19"
+        placeholder="xxxx xxxx xxxx xxxx"
+      />
+      <br />
+      <br />
+      <label for="cvc"> Card CVC:</label>
+      <input
+        id="cvc"
+        type="tel"
+        inputmode="numeric"
+        maxlength="3"
+        placeholder="xxx"
+      />
+      <br />
+      <br />
+      <label for="mounth"> Credit card expiring date:</label>
+      <input id="cvc" type="month" inputmode="numeric" />
+      <br />
+      <br />
+      <label for="address"> Write your address:</label>
+      <input id="address" type="search" />
+      <br />
+      <br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

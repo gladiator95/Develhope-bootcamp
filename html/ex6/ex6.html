@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Lezione HTML</title>
+    <!-- Aggiungi alla pagina:
+
+- Un pulsante disabilitato
+- Un input numerico, con relativa label, nel range 0-100 e con step di 2
+- Una checkbox con relativa label
+- Un input di tipo date
+
+La checkbox deve essere già selezionata all'apertura della pagina.
+L'input numerico deve avere il focus all'apertura della pagina. -->
+  </head>
+
+  <body>
+    <button disabled>Submit</button>
+    <br />
+    <label for="range">Range ( 0 - 100):</label>
+    <input
+      type="number"
+      id="range"
+      name="range"
+      value="2"
+      min="0"
+      max="100"
+      autofocus
+    />
+    <br />
+    <label for="check">checkbox</label>
+    <input type="checkbox" id="check" checked />
+    <br />
+    <input type="date" />
+  </body>
+</html>

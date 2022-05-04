@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Tapestry&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tapestry&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "PT Sans", sans-serif;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 12%,
+    rgba(0, 64, 77, 1) 60%,
+    rgba(38, 38, 48, 1) 92%
+  );
+}
+
+.container {
+  max-width: 86%;
+  margin: 0 auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+main {
+  padding-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Tapestry", cursive;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  color: white;
+}
+h1 span {
+  background-color: rgb(24, 161, 12);
+  padding: 1rem;
+  border: 1px solid white;
+}
+
+.card {
+  width: 16rem;
+  border-radius: 10px;
+  color: white;
+  border: 1px solid white;
+  background: rgb(2, 0, 36);
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 0.4rem;
+}
+h3 span {
+  padding: 0.4rem;
+  background-color: rgb(24, 161, 12);
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+ul {
+  padding: 1rem 1rem;
+}
+
+li {
+  list-style: none;
+  font-size: 1.1rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: rgb(24, 161, 12);
+}

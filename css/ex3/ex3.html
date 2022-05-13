@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esercizio Css 3</title>
+    <!-- Replicare il layout fornito nei file allegati, attraverso l'utilizzo di grid. -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background: #f6f6f6;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      .calculator {
+        max-width: 400px;
+        margin: 0 auto;
+        border: 2px solid #111;
+        border-radius: 8px;
+      }
+      .calculator input {
+        background: rgb(63, 61, 61);
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        border-bottom: 2px solid #111;
+        padding: 20px;
+        text-align: right;
+        font-size: 2rem;
+      }
+      input::placeholder {
+        color: #f6f6f6;
+      }
+
+      .calc-buttons {
+        /* Grid starts here */
+        display: grid;
+        /* grid-template-columns: 1fr 1fr 1fr 1fr;
+           grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+        /* un modo piu semplice  prima va row poi column */
+        grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+        /* grid-gap crea spazio tra elementi */
+        grid-gap: 1px;
+      }
+
+      .calc-btn {
+        padding: 20px;
+        font-size: 1.3rem;
+        background-color: rgb(181, 181, 181);
+        font-weight: 700;
+      }
+      .equals {
+        grid-row: span 5;
+        background-color: rgb(246, 57, 57);
+      }
+      .plus,
+      .minus,
+      .divide,
+      .times {
+        background-color: rgb(184, 212, 252);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="number" placeholder="0" />
+      <div class="calc-buttons">
+        <button class="calc-btn plus">&plus;</button>
+        <button class="calc-btn minus">&minus;</button>
+        <button class="calc-btn times">&times;</button>
+        <button class="calc-btn divide">&divide;</button>
+
+        <button class="calc-btn">7</button>
+        <button class="calc-btn">8</button>
+        <button class="calc-btn">9</button>
+        <button class="calc-btn equals">&equals;</button>
+
+        <button class="calc-btn">4</button>
+        <button class="calc-btn">5</button>
+        <button class="calc-btn">6</button>
+        <button class="calc-btn">1</button>
+        <button class="calc-btn">2</button>
+        <button class="calc-btn">3</button>
+        <button class="calc-btn">0</button>
+        <button class="calc-btn">.</button>
+        <button class="calc-btn">AC</button>
+      </div>
+    </div>
+  </body>
+</html>

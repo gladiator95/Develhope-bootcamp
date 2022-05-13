@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esercizio Css 5</title>
+    <!-- Partendo dalla navbar realizzata nell'esercizio 10 di HTML, aggiungi il css.
+    Il bottone Search in hover diventa verde con il testo bianco. Gestisci anche
+    il responsive, da 768px in giù nascondi tutti gli elementi presenti tranne
+    "Navbar" e al loro posto, nella parte destra della navbar, deve apparire un
+    hamburger menù (senza funzionalità). -->
+    <style>
+      ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+      }
+      .btn-search:hover {
+        background-color: rgb(15, 143, 4);
+        color: white;
+        border: none;
+      }
+
+      svg {
+        display: none;
+      }
+      @media screen and (max-width: 768px) {
+        ul {
+          justify-content: space-between;
+        }
+
+        svg {
+          display: inline;
+        }
+        a,
+        select,
+        button,
+        input {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <strong>NavBar</strong>
+      </li>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/">Link</a>
+      </li>
+      <li>
+        <select name="dropdown" id="dropdown">
+          <option value="" disabled selected>dropdown</option>
+          <option>link</option>
+          <option>link</option>
+        </select>
+      </li>
+      <li>
+        <button disabled>disabled</button>
+      </li>
+      <li>
+        <input type="search" />
+        <button class="btn-search">Search</button>
+      </li>
+      <li>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          fill="black"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+          />
+        </svg>
+      </li>
+    </ul>
+  </body>
+</html>

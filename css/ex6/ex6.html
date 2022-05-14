@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esercizio Css 6</title>
+    <!-- Usando il file start.css prova a ricreare il layout fornito, usando grid
+Il blocco green e orange sono alti la metà dei blocchi yellow e red  -->
+    <style>
+      body {
+        width: 60em;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template: 1fr 2fr 1fr;
+      }
+
+      section {
+        padding: 2em;
+        margin: 0.4em;
+      }
+
+      #green {
+        background-color: #8ffda7;
+        grid-column: span 3;
+      }
+
+      #orange {
+        background-color: #ffc788;
+        grid-column: span 2;
+      }
+
+      #yellow {
+        background-color: #ffff92;
+      }
+
+      #red {
+        background-color: #ff919c;
+      }
+
+      #blue {
+        background-color: #98d2ff;
+        grid-row: span 3;
+      }
+
+      ul {
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      li {
+        background-color: white;
+        padding: 1em;
+        display: block;
+        margin: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="green"><h2>GREEN</h2></section>
+    <section id="yellow">
+      <h2>YELLOW</h2>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </section>
+    <section id="red">
+      <h2>RED</h2>
+      <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+      </ul>
+    </section>
+    <section id="blue"><h2>BLUE</h2></section>
+    <section id="orange">
+      <h2>ORANGE</h2>
+    </section>
+  </body>
+</html>
